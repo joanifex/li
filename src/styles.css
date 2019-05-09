@@ -8,7 +8,10 @@ body {
 }
 
 .list {
+  align-items: center;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .node {
@@ -16,9 +19,15 @@ body {
   border: 1px solid black;
   display: flex;
   font-size: 3rem;
-  margin-right: 1rem;
   height: 4rem;
   width: 8rem;
+}
+
+.node > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 .node:after {
@@ -30,8 +39,7 @@ body {
   transform: translateX(-50%);
 }
 
-.node:after {
-  align-items: center;
-  display: flex;
-  content: '→';
+.pointer {
+  height: 2rem;
+  width: 4rem;
 }
