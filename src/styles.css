@@ -1,3 +1,37 @@
 body {
   font-family: sans-serif;
 }
+
+.app {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.list {
+  display: flex;
+}
+
+.node {
+  align-items: center;
+  border: 1px solid black;
+  display: flex;
+  font-size: 3rem;
+  margin-right: 1rem;
+  height: 4rem;
+  width: 8rem;
+}
+
+.node:after {
+  content: '';
+  position: absolute;
+  border-right: 1px solid black;
+  height: 4rem;
+  width: 8rem;
+  transform: translateX(-50%);
+}
+
+.node:after {
+  align-items: center;
+  display: flex;
+  content: '→';
+}
