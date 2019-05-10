@@ -1,6 +1,7 @@
+import LinkedList from './LinkedList';
 import './styles.css';
 import './reset.css';
-import LinkedList from './LinkedList';
+import './skeleton.css';
 
 const linkedList = document.querySelector(`#linkedList`);
 const newButton = document.querySelector(`#newButton`);
