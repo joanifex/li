@@ -21,15 +21,15 @@ newButton.addEventListener('click', function() {
 
 function traverse(list, visit) {
   if (!list) return;
-  visit(list.data);
+  visit(list);
   traverse(list.next, visit);
 }
 
 function drawNode(node) {
   return `
     <li class="node">
-      <div class="node__data">${node}</div>
-      <div class="node__next">x</div>
+      <div class="node__data">${node.data}</div>
+      <div class="node__next">${node.next ? 'next' : 'null'}</div>
     </li>
   `;
 }
@@ -61,10 +61,8 @@ function drawPointer() {
 
 function drawList() {
   const nodes = [];
-  traverse(list, data => nodes.push(data));
+  traverse(list, node => nodes.push(node));
   linkedList.innerHTML = `
-    <ul class="list">
-      ${nodes.map(node => drawNode(node)).join(drawPointer())}
-    </ul>
+    ${nodes.map(node => drawNode(node)).join(drawPointer())}
   `;
 }

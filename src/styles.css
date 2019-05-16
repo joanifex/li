@@ -3,8 +3,12 @@ body {
 }
 
 .app {
-  display: grid;
-  grid-gap: 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 750px;
+  justify-content: center;
 }
 
 .list {
@@ -17,11 +21,12 @@ body {
 .node {
   align-items: center;
   border: 1px solid black;
+  border-radius: 0.25rem;
   display: flex;
   font-size: 3rem;
-  height: 4rem;
+  height: 8rem;
   margin-bottom: 0;
-  width: 8rem;
+  width: 16rem;
 }
 
 .node > * {
@@ -35,12 +40,12 @@ body {
   content: '';
   position: absolute;
   border-right: 1px solid black;
-  height: 4rem;
-  width: 8rem;
+  height: 8rem;
+  width: 16rem;
   transform: translateX(-50%);
 }
 
 .pointer {
-  height: 2rem;
-  width: 4rem;
+  height: 4rem;
+  width: 8rem;
 }
